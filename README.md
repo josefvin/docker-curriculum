@@ -402,18 +402,12 @@ Here are the steps:
 <img src="images/eb-start.png" title="static">
 
 - Click on "Create New Application" in the top right
-- Give your app a memorable (but unique) name and provide an (optional) description
-- In the **New Environment** screen, choose the **Web Server Environment**.
-- The following screen is shown below. Choose *Docker* from the predefined configuration. You can leave the *Environment type* as it is. Click Next.
-
-<img src="images/eb-docker.png" title="static">
-
-- This is where we need to tell EB about our image. Open the `Dockerrun.aws.json` [file](https://github.com/prakhar1989/docker-curriculum/blob/master/flask-app/Dockerrun.aws.json) located in the `flask-app` folder and edit the `Name` of the image to your image's name. Don't worry, I'll explain the contents of the file shortly. When you are done, click on the radio button for "upload your own" and choose this file.
-- Next up, choose an environment name and a URL. This URL is what you'll share with your friends so make sure it's easy to remember.
-- For now, we won't be making changes in the *Additional Resources* section. Click Next and move to *Configuration Details*.
-- In this section, all you need to do is to check that the instance type is `t1.micro`. This is very important as this is the **free** instance by AWS. You can optionally choose a key-pair to login. If you don't know what that means, feel free to ignore this for now. We'll leave everything else to the default and forge ahead.
-- We also don't need to provide any *Environment Tags* and *Permissions*, so without batting an eyelid, you can click Next twice in succession. At the end, the screen shows us the *Review* page. If everything looks good, go ahead and press the **Launch** button.
-- The final screen that you see will have a few spinners indicating that your environment is being set up. It typically takes around 5 minutes for the first-time setup.
+- Give your app a memorable (but unique) name, provide an (optional) description and click **Create**
+- On the next screen, click the **Actions** drop down menu and select **Create environment**
+- In the pop up window, choose **Web Server Environment** and click **Select**
+- On the following screen, choose *Docker* from the **Preconfigured platform** drop down menu (all the way at the bottom). 
+- Next we need to tell EB about our image. Open the `Dockerrun.aws.json` [file](https://github.com/prakhar1989/docker-curriculum/blob/master/flask-app/Dockerrun.aws.json) located in the `flask-app` folder and edit the `Name` of the image to your image's name. Don't worry, I'll explain the contents of the file shortly. When you are done, scroll down a bit to the **Application code** section and click on the radio button for "upload your own". Choose this file. You can leave everything else alone. Click **Create environment*.
+- The final screen that you see will indicate that your environment is being set up. It typically takes around 5 minutes for the first-time setup.
 
 While we wait, let's quickly see what the `Dockerrun.aws.json` file contains. This file is basically an AWS specific file that tells EB details about our application and docker configuration.
 
@@ -438,7 +432,7 @@ Hopefully by now, our instance should be ready. Head over to the EB page and you
 
 <img src="images/eb-deploy.png" title="static">
 
-Go ahead and open the URL in your browser and you should see the application in all its glory. Feel free to email / IM / snapchat this link to your friends and family so that they can enjoy a few cat gifs, too.
+Go ahead and open the URL (shown near the top) in your browser and you should see the application in all its glory. Feel free to email / IM / snapchat this link to your friends and family so that they can enjoy a few cat gifs, too.
 
 Congratulations! You have deployed your first Docker application! That might seem like a lot of steps, but with the command-line tool for EB you can almost mimic the functionality of Heroku in a few keystrokes! Hopefully you agree that Docker takes away a lot of the pains of building and deploying applications in the cloud. I would encourage you to read the AWS [documentation](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/docker-singlecontainer-deploy.html) on single-container Docker environments to get an idea of what features exist.
 
