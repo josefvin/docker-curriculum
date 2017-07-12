@@ -405,8 +405,8 @@ Here are the steps:
 - Give your app a memorable (but unique) name, provide an (optional) description and click **Create**
 - On the next screen, click the **Actions** drop down menu and select **Create environment**
 - In the pop up window, choose **Web Server Environment** and click **Select**
-- On the following screen, choose *Docker* from the **Preconfigured platform** drop down menu (all the way at the bottom). 
-- Next we need to tell EB about our image. Open the `Dockerrun.aws.json` [file](https://github.com/prakhar1989/docker-curriculum/blob/master/flask-app/Dockerrun.aws.json) located in the `flask-app` folder and edit the `Name` of the image to your image's name. Don't worry, I'll explain the contents of the file shortly. When you are done, scroll down a bit to the **Application code** section and click on the radio button for "upload your own". Choose this file. You can leave everything else alone. Click **Create environment*.
+- On the following screen, choose *Docker* from the **Preconfigured platform** drop down menu (all the way at the bottom) 
+- Next we need to tell EB about our image. Open the `Dockerrun.aws.json` [file](https://github.com/prakhar1989/docker-curriculum/blob/master/flask-app/Dockerrun.aws.json) located in the `flask-app` folder and edit the `Name` of the image to your image's name. Don't worry, I'll explain the contents of the file shortly. When you are done, scroll down a bit to the **Application code** section and click on the radio button for "upload your own". Choose this file. You can leave everything else alone. Click **Create environment**.
 - The final screen that you see will indicate that your environment is being set up. It typically takes around 5 minutes for the first-time setup.
 
 While we wait, let's quickly see what the `Dockerrun.aws.json` file contains. This file is basically an AWS specific file that tells EB details about our application and docker configuration.
